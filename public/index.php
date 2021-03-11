@@ -11,8 +11,8 @@ $container = new Container();
 AppFactory::setContainer($container);
 
 $container->set('view', function () {
-    // return Twig::create('../templates', ['cache' => '../cache/view']);
-    return Twig::create('../templates', []);
+    return Twig::create('../templates', ['cache' => '../cache/view']);
+    // return Twig::create('../templates', []);
 });
 
 $app = AppFactory::create();
