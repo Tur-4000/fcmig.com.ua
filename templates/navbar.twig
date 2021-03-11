@@ -1,8 +1,8 @@
-<div>
-<ul>
-    <li><a href="{{ full_url_for('home') }}">Главная</a></li>
-    <li><a href="{{ full_url_for('services') }}">Услуги</a></li>
-    <li><a href="{{ full_url_for('documents') }}">Документы</a></li>
-    <li><a href="{{ full_url_for('contacts') }}">Контакты</a></li>
-</ul>
-</div>
+<nav class="navbar">
+  <ul class="navbar__wraper">
+    <li class="navbar__item"><a class="navbar__item--link" href="{{ full_url_for('home') }}">Главная</a></li>
+    <li class="navbar__item"><a class="navbar__item--link" href="{{ full_url_for('services') }}">Услуги</a></li>
+    <li class="navbar__item"><a class="navbar__item--link" href="{{ full_url_for('documents') }}">Документы</a></li>
+    <li class="navbar__item"><a class="navbar__item--link" href="{{ full_url_for('contacts') }}">Контакты</a></li>
+  </ul>
+</nav>

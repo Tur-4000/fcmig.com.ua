@@ -8,26 +8,26 @@
   <title>Document</title>
 </head>
 <body>
-
-  <header>
+  <div class="container">
     {% block nav %}
       {% include 'navbar.twig' %}
     {% endblock %}
 
-    {% block header %}
-    {% endblock %}
-  </header>
+    <header>
+      {% block header %}
+      {% endblock %}
+    </header>
 
-  <main>
-    {% block content %}
-    {% endblock %}
-  </main>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
 
-  <footer>
-    {% block footer %}
-      {% include 'footer.twig' %}
-    {% endblock %}
-  </footer>
-
+    <footer>
+      {% block footer %}
+        {% include 'footer.twig' %}
+      {% endblock %}
+    </footer>
+  </div>
 </body>
 </html>
