@@ -25,6 +25,11 @@ $app->get('/', function ($request, $response, $args) {
     return $this->get('view')->render($response, 'main.twig', $params);
 })->setName('home');
 
+$app->get('/owners', function ($request, $response, $args) {
+    $params = ['pageName' => 'структура власності'];
+    return $this->get('view')->render($response, 'owners.twig', $params);
+})->setName('owners');
+
 $app->get('/services', function ($request, $response, $args) {
     $params = ['pageName' => 'Услуги'];
     return $this->get('view')->render($response, 'services.twig', $params);

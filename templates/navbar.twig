@@ -5,16 +5,19 @@
     </div>
     <ul class="navbar__nav">
       <li class="navbar__item {% if is_current_url('home') %} navbar__item--active {% endif %}">
-        <a class="navbar__item--link" href="{{ full_url_for('home') }}">Главная</a>
+        <a class="navbar__item--link" href="{{ full_url_for('home') }}">Головна</a>
+      </li>
+      <li class="navbar__item {% if is_current_url('owners') %} navbar__item--active {% endif %}">
+        <a class="navbar__item--link" href="{{ full_url_for('owners') }}">структура власності</a>
       </li>
       <li class="navbar__item {% if is_current_url('services') %} navbar__item--active {% endif %}">
-        <a class="navbar__item--link" href="{{ full_url_for('services') }}">Услуги</a>
+        <a class="navbar__item--link" href="{{ full_url_for('services') }}">послуги</a>
       </li>
       <li class="navbar__item {% if is_current_url('documents') %} navbar__item--active {% endif %}">
-        <a class="navbar__item--link" href="{{ full_url_for('documents') }}">Документы</a>
+        <a class="navbar__item--link" href="{{ full_url_for('documents') }}">Документи</a>
       </li>
       <li class="navbar__item {% if is_current_url('contacts') %} navbar__item--active {% endif %}">
-        <a class="navbar__item--link" href="{{ full_url_for('contacts') }}">Контакты</a>
+        <a class="navbar__item--link" href="{{ full_url_for('contacts') }}">Контакти</a>
       </li>
     </ul>
   </div>
