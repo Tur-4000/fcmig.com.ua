@@ -9,16 +9,17 @@
 </head>
 <body>
   <div class="container">
-    {% block nav %}
-      {% include 'navbar.twig' %}
-    {% endblock %}
-
     <header class="header">
+      {% block nav %}
+        {% include 'navbar.twig' %}
+      {% endblock %}
+
       {% block header %}
+        {% include 'header.twig' %}
       {% endblock %}
     </header>
 
-    <main>
+    <main class="content">
       {% block content %}
       {% endblock %}
     </main>

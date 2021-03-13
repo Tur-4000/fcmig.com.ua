@@ -1,6 +1,7 @@
 :root {
     --light-color: #fffbdb;
-    --dark-color: #620019;
+    --dark-color: #222;
+    --mig-color: #620019;
 }
 
 @font-face {
@@ -53,37 +54,77 @@ body {
 
 .navbar {
     position: sticky;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     max-width: 100%;
     height: 3rem;
     margin: 0;
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
 }
 .navbar__wraper {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
     min-width: 100%;
+}
+.navbar__brand {
+    padding-left: 2rem;
+}
+.navbar__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     padding: 0;
     margin: 0;
     list-style: none;
 }
+.navbar__nav:last-child {
+    margin-right: 2rem;
+}
 .navbar__item {
+    margin: 0 0.5rem;
     padding: 0.05rem 0.5rem;
     display: block;
     border-bottom: 5px solid transparent;
     transition-property: border-bottom-color;
     transition-duration: 500ms;
-
 }
 .navbar__item--active,
 .navbar__item:hover {
-    border-bottom: 5px solid var(--dark-color);
+    border-bottom: 3px solid var(--light-color);
 }
 .navbar__item--link {
     text-decoration: none;
     font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--light-color);
+}
+
+.page__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    width: 100%;
+    height: 7rem;
+    background-color: #444;
+}
+.page__header--title {
+    text-align: center;
+    font-size: 2rem;
     font-weight: 700;
-    color: var(--dark-color);
+    color: var(--mig-color);
+}
+.page__header--okpo {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--mig-color);
+}
+
+.page--title {
+
 }

@@ -1,16 +1,21 @@
 <nav class="navbar">
-  <ul class="navbar__wraper">
-    <li class="navbar__item {% if is_current_url('home') %} navbar__item--active {% endif %}">
-      <a class="navbar__item--link" href="{{ full_url_for('home') }}">Главная</a>
-    </li>
-    <li class="navbar__item {% if is_current_url('services') %} navbar__item--active {% endif %}">
-      <a class="navbar__item--link" href="{{ full_url_for('services') }}">Услуги</a>
-    </li>
-    <li class="navbar__item {% if is_current_url('documents') %} navbar__item--active {% endif %}">
-      <a class="navbar__item--link" href="{{ full_url_for('documents') }}">Документы</a>
-    </li>
-    <li class="navbar__item {% if is_current_url('contacts') %} navbar__item--active {% endif %}">
-      <a class="navbar__item--link" href="{{ full_url_for('contacts') }}">Контакты</a>
-    </li>
-  </ul>
+  <div class="navbar__wraper">
+    <div class="navbar__brand">
+      <a href="{{ full_url_for('home') }}">ФК МИГ</a>
+    </div>
+    <ul class="navbar__nav">
+      <li class="navbar__item {% if is_current_url('home') %} navbar__item--active {% endif %}">
+        <a class="navbar__item--link" href="{{ full_url_for('home') }}">Главная</a>
+      </li>
+      <li class="navbar__item {% if is_current_url('services') %} navbar__item--active {% endif %}">
+        <a class="navbar__item--link" href="{{ full_url_for('services') }}">Услуги</a>
+      </li>
+      <li class="navbar__item {% if is_current_url('documents') %} navbar__item--active {% endif %}">
+        <a class="navbar__item--link" href="{{ full_url_for('documents') }}">Документы</a>
+      </li>
+      <li class="navbar__item {% if is_current_url('contacts') %} navbar__item--active {% endif %}">
+        <a class="navbar__item--link" href="{{ full_url_for('contacts') }}">Контакты</a>
+      </li>
+    </ul>
+  </div>
 </nav>
