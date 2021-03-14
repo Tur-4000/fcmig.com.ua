@@ -126,7 +126,7 @@ body {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 400;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color: var(--light-color);
     transition-property: color;
     transition-duration: 500ms;
@@ -186,6 +186,9 @@ body {
 
 .page__section {
     margin-bottom: 3rem;
+}
+.page__section p {
+    margin: 0.5rem 0;
 }
 .page__section--title {
     font-size: 1.3rem;
