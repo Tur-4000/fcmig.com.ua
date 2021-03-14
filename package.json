@@ -1,0 +1,22 @@
+{
+  "name": "fcmig.com.ua",
+  "version": "1.0.0",
+  "description": "WEB site fcmig.com.ua",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tur-4000/fcmig.com.ua.git"
+  },
+  "author": "Turbanov Valeriy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tur-4000/fcmig.com.ua/issues"
+  },
+  "homepage": "https://github.com/Tur-4000/fcmig.com.ua#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
