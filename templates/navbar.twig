@@ -1,7 +1,11 @@
 <nav class="navbar">
   <div class="navbar__wraper">
     <div class="navbar__brand">
-      <a href="{{ full_url_for('home') }}">ФК МИГ</a>
+      <a href="{{ full_url_for('home') }}" class="brand__link">
+        <svg class="brand__img">
+          <use xlink:href="/img/mig-logo.svg#mig_logo"></use>
+        </svg>
+      </a>
     </div>
     <ul class="navbar__nav">
       <li class="navbar__item {% if is_current_url('home') %} navbar__item--active {% endif %}">

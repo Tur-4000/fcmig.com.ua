@@ -9,26 +9,28 @@
 </head>
 <body>
   <div class="container">
-    <header class="header">
-      {% block nav %}
-        {% include 'navbar.twig' %}
-      {% endblock %}
-
-      {% block header %}
-        {% include 'header.twig' %}
-      {% endblock %}
-    </header>
-
-    <main class="content">
-      {% block content %}
-      {% endblock %}
-    </main>
-
-    <footer>
-      {% block footer %}
-        {% include 'footer.twig' %}
-      {% endblock %}
-    </footer>
+    <div class="wrapper">
+      <header class="header">
+        {% block nav %}
+          {% include 'navbar.twig' %}
+        {% endblock %}
+  
+        {% block header %}
+          {% include 'header.twig' %}
+        {% endblock %}
+      </header>
+  
+      <main class="content">
+        {% block content %}
+        {% endblock %}
+      </main>
+  
+      <footer class="footer">
+        {% block footer %}
+          {% include 'footer.twig' %}
+        {% endblock %}
+      </footer>
+    </div>
   </div>
 </body>
 </html>
