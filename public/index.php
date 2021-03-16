@@ -31,17 +31,17 @@ $app->get('/owners', function ($request, $response, $args) {
 })->setName('owners');
 
 $app->get('/services', function ($request, $response, $args) {
-    $params = ['pageName' => 'Услуги'];
+    $params = ['pageName' => 'Послуги'];
     return $this->get('view')->render($response, 'services.twig', $params);
 })->setName('services');
 
 $app->get('/documents', function ($request, $response, $args) {
-    $params = ['pageName' => 'Документы'];
+    $params = ['pageName' => 'Документи'];
     return $this->get('view')->render($response, 'documents.twig', $params);
 })->setName('documents');
 
 $app->get('/contacts', function ($request, $response, $args) {
-    $params = ['pageName' => 'Контакты'];
+    $params = ['pageName' => 'Контакти'];
     return $this->get('view')->render($response, 'contacts.twig', $params);
 })->setName('contacts');
 

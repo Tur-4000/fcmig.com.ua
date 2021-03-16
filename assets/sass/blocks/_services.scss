@@ -1,0 +1,90 @@
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.services__title {
+    margin-bottom: 2rem;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    background-color: $service-bg;
+}
+
+.service__title {
+    text-align: center;
+}
+
+.service__description {
+    flex: 1 0 auto;
+}
+
+.service__terms {
+    flex: 0 0 auto;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+.service__terms--link {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: $light-color;
+    background-color: #444;
+    transition-property: color;
+    transition-duration: 500ms;
+
+    svg {
+        height: 32px;
+        width: 32px;
+        margin-bottom: -6px;
+        fill: $light-color;
+        transition-property: fill;
+        transition-duration: 500ms;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $gold;
+
+        svg {
+            fill: $gold;
+        }
+    }
+}
+.services__extra {
+    margin: 3rem 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.services__extra--link {
+    text-decoration: none;
+    color: $mig-color;
+    transition-property: color;
+    transition-duration: 500ms;
+
+    svg {
+        height: 24px;
+        width: 24px;
+        margin-bottom: -5px;
+        fill: $mig-color;
+        transition-property: fill;
+        transition-duration: 500ms;
+    }
+
+    &:hover {
+        color: $dark-color;
+        
+        svg {
+            fill: $dark-color;
+        }
+    }
+}
