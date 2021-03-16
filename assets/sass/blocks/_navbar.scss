@@ -11,6 +11,7 @@
     background-color: var(--dark-color);
     z-index: 10;
 }
+
 .navbar__wraper {
     display: flex;
     flex-direction: row;
@@ -22,18 +23,24 @@
 .navbar__brand {
     padding-left: 2rem;
 }
+
 .brand__img {
     width: 4rem;
     height: 2rem;
     fill: var(--light-color);
     transition-property: fill;
     transition-duration: 500ms;
+
+    &:hover,
+    &:focus,
+    &:active {
+        fill: $gold;
+    }
 }
-.brand__link .brand__img:hover,
-.brand__link .brand__img:focus,
-.brand__link .brand__img:active {
-    fill: $gold;
-}
+
+// .brand__link {
+
+// }
 
 .navbar__nav {
     display: flex;
@@ -42,34 +49,40 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    
+    &:last-child {
+        margin-right: 2rem;
+    }
 }
-.navbar__nav:last-child {
-    margin-right: 2rem;
-}
+
 .navbar__item {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__item--active {
+    .navbar__item--link {
+        border-bottom: 3px solid var(--light-color);
+    }
+}
+
+.navbar__item--link {
+    display: block;
     margin: 0 0.5rem;
     padding: 0.05rem 0.5rem;
-    display: block;
-    border-bottom: 5px solid transparent;
-    transition-property: border-bottom-color;
-    transition-duration: 500ms;
-}
-.navbar__item--active {
-    border-bottom: 3px solid var(--light-color);
-}
-.navbar__item:hover {
-    /* border-bottom: 3px solid var(--light-color); */
-    border-bottom: 3px solid $gold;
-}
-.navbar__item--link {
+    border-bottom: 3px solid transparent;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
-    /* text-transform: capitalize; */
     color: var(--light-color);
-    transition-property: color;
+    transition-property: color border-bottom-color;
     transition-duration: 500ms;
-}
-.navbar__item--link:hover {
-    color: $gold;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $gold;
+        border-bottom-color: $gold;
+    }
 }
