@@ -37,13 +37,23 @@ gulp.task('css', function(cb) {
         }) )
 
         .pipe(sourcemaps.init())
-        .pipe(buildCss(
-            // {outputStyle: 'compressed'}
-        ))
+        .pipe(buildCss())
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 4 versions']
         }))
         .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./public/css/'));
+    cb();
+});
+
+gulp.task('css:prod', function(cb) {
+    return gulp.src('./assets/sass/style.scss')
+        .pipe(buildCss(
+            {outputStyle: 'compressed'}
+        ))
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 4 versions']
+        }))
         .pipe(gulp.dest('./public/css/'));
     cb();
 });
@@ -62,6 +72,10 @@ gulp.task('watch', function() {
         setTimeout(gulp.parallel('copy:fonts'), 1000);
     });
 });
+
+gulp.task('build:dev', gulp.parallel('copy:images', 'copy:js', 'copy:fonts', 'css'));
+
+gulp.task('build:prod', gulp.parallel('copy:images', 'copy:js', 'copy:fonts', 'css:prod'));
 
 gulp.task(
     'default',
