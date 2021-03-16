@@ -1,0 +1,28 @@
+
+html {
+    font-size: 18px;
+    font-family: 'Arsenal', sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    min-height: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}

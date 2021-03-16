@@ -1,0 +1,28 @@
+
+/* .header {
+
+} */
+
+.page__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    width: 100%;
+    height: 7rem;
+    color: var(--light-color);
+    /* background-color: #444; */
+    background-image: url('../img/header-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page__header--title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.page__header--okpo {
+    text-align: center;
+    font-size: 1.5rem;
+}
