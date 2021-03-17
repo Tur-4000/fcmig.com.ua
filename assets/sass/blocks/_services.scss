@@ -1,7 +1,7 @@
 .services {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .services__title {
@@ -9,10 +9,33 @@
 }
 
 .service {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem 1rem 1rem;
+    background-color: $service-bg;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.service__icon {
+    margin-top: 2rem;
+    display: block;
+
+    svg {
+        height: 64px;
+        width: 64px;
+        fill: $mig-color;
+        padding: 6px;
+        border-radius: 35px;
+        background-color: $light-color;
+        box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+    }
+}
+
+.service__inner {
     display: flex;
     flex-direction: column;
-    padding: 1rem 2rem;
-    background-color: $service-bg;
+    margin-top: 1rem;
 }
 
 .service__title {
