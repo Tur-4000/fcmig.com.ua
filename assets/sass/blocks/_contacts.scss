@@ -1,0 +1,22 @@
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "office nbu" "map map";
+    gap: 2rem;
+}
+
+.contacts__office {
+    grid-area: office;
+}
+
+.contacts__nbu {
+    grid-area: nbu;
+}
+
+.contacts__map {
+    grid-area: map;
+
+    p {
+        text-align: center;
+    }
+}
